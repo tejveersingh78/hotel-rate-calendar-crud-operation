@@ -1,6 +1,7 @@
 package com.sunglowsys.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
@@ -10,12 +11,26 @@ public class HotelRateCalendar {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
+
+        @Column(nullable = false)
         private Integer single_occupancy;
+
+        @Column(nullable = false)
         private Integer double_occupancy;
+
+        @Column(nullable = false)
         private Integer extra_adult_price;
+
+        @Column(nullable = false)
         private Integer extra_child_price;
+
+        @Column(nullable = false)
         private Integer applicable_days;
+
+        @Column(nullable = false)
         private Integer hotel_id;
+
+        @Column(nullable = false)
         private Integer hotel_room_rate_id;
 
     public HotelRateCalendar() {
